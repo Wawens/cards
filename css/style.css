@@ -1,0 +1,61 @@
+body {
+    background-color: blanchedalmond;
+}
+
+.grille {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(3, 200px);
+    margin: 75px auto;
+    padding: 1.2em;
+    height: 600px;
+    width: 800px;
+    background-color: rgba(22, 17, 17, 0.733);
+}
+
+img {
+    width: 123px;
+}
+
+.carte {
+    background-color: transparent;
+    perspective: 1000px;
+    margin: 5px;
+}
+
+.double-face {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+}
+
+.face,
+.arriere {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.face {
+    background-image: radial-gradient(circle at 50% -20.71%, #ffc0a9 0, #ffb5a6 16.67%, #ffa9a2 33.33%, #f29d9d 50%, #de9297 66.67%, #cc8891 83.33%, #bb7f8b 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+.arriere {
+    background-image: radial-gradient(circle at 50% -20.71%, #ffe6cd 0, #ffe7ca 6.25%, #ffe9c9 12.5%, #ffebc8 18.75%, #fbecc8 25%, #f6eec8 31.25%, #f1efc9 37.5%, #ebf1cb 43.75%, #e6f2cd 50%, #e1f3d0 56.25%, #dbf4d3 62.5%, #d6f5d7 68.75%, #d1f6db 75%, #ccf7df 81.25%, #c8f8e4 87.5%, #c4f8e9 93.75%, #c1f8ee 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.animation-cards {
+    transform: rotateY(150deg);
+}
